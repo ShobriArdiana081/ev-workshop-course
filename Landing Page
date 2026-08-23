@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Workshop Online Course</title>
+
+    <!-- Watzap Ad Tracking -->
+    <script
+        src="https://secure.watzap.chat/wzp/v1/baxia.js?project=wzp_JvlJ-rorQmstiZUVLEQ0FQ&endpoint=https%3A%2F%2Fsecure.watzap.chat%2Fapi%2Flp%2Ftrack"
+        data-wzp-project="wzp_JvlJ-rorQmstiZUVLEQ0FQ"
+        data-wzp-endpoint="https://secure.watzap.chat/api/lp/track">
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #222;
+            background: #f8fafc;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.3;
+        }
+
+        p {
+            color: #555;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 32px;
+            background: #0f172a;
+            color: #fff;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1e293b;
+        }
+
+        .highlight {
+            color: #0077ff;
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #081220, #0b2239);
+            color: #fff;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero p {
+            color: #d7d7d7;
+        }
+
+        .hero-image {
+            padding: 25px;
+            background: #fff;
+            border-radius: 20px;
+        }
+
+        .hero-image img + img {
+            margin-top: 20px;
+        }
+
+        .hero h1 {
+            margin-bottom: 25px;
+            font-size: 52px;
+        }
+
+        .hero h3 {
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .cta-box {
+            margin-top: 30px;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+        }
+
+        /* PROOF */
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .proof-card {
+            padding: 30px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .proof-card h3 {
+            margin-bottom: 15px;
+        }
+
+        .image-box {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* TABLE */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            min-width: 650px;
+            border-collapse: collapse;
+            background: #fff;
+        }
+
+        th {
+            padding: 20px;
+            background: #0f172a;
+            color: #fff;
+            text-align: left;
+        }
+
+        td {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        /* RISK REVERSAL */
+        .objection {
+            padding: 30px;
+            margin-bottom: 40px;
+            background: #fff;
+            border-left: 8px solid #ff9800;
+            border-radius: 12px;
+        }
+
+        .risk-box {
+            padding: 40px;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        .price {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .price h2 {
+            margin: 20px 0;
+            color: #0077ff;
+            font-size: 42px;
+        }
+
+        .footer-cta {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .proof-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .risk-box {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+
+                <div>
+                    <h1>
+                        How Many Electric Vehicle Customers Have You Already Turned Away?
+                    </h1>
+
+                    <p>
+                        Or are you worried about making a mistake when handling a high-voltage
+                        battery worth tens of thousands of U.S. dollars?
+                    </p>
+
+                    <br>
+
+                    <h3>
+                        Learn the fundamentals of electric vehicle systems through
+                        <span class="highlight">58 comprehensive video lessons</span>
+                        and
+                        <span class="highlight">2 live consultation sessions</span>.
+                    </h3>
+
+                    <p>
+                        Understand the core EV components, diagnostic workflow, and safe
+                        handling procedures—without traveling overseas.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Study anytime at your own pace. After completing the lessons,
+                        you'll also receive 2 live consultation sessions where you can
+                        ask questions about the course content or discuss real cases
+                        you encounter in your workshop.
+                    </p>
+
+                    <div class="cta-box">
+                        <a
+                            href="#"
+                            class="btn"
+                            onclick="
+                                fbq('track', 'Lead');
+                                setTimeout(function () {
+                                    window.location.href = 'https://wa.me/message/LLEIHRR54SLJA1';
+                                }, 300);
+                                return false;
+                            "
+                        >
+                            Start Learning Today
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <img
+                        src="https://cdn.scalev.com/uploads/1781582552/F8AKqMFlBfjabNKZRtaPQA/1781582550071-3.webp"
+                        alt="EV Training Laboratory"
+                    >
+
+                    <img
+                        src="https://cdn.scalev.com/uploads/1782303093/ntob2XKe-N_qHNwynDfbtA/1782303092119-0069.webp"
+                        alt="EV Training Laboratory"
+                    >
+
+                    <img
+                        src="https://cdn.scalev.com/uploads/1782302773/rOyOTUsakzvpgqnn_T1yjw/1782302772535-Image_2026-06-24_190539_312.webp"
+                        alt="EV Training Laboratory"
+                    >
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROOF SECTION -->
+    <section>
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Why Should Your Workshop Start Learning EV Technology Now?</h2>
+            </div>
+
+            <div class="proof-grid">
+
+                <div class="proof-card">
+                    <h3>International Participants</h3>
+
+                    <p>
+                        Beifang has trained participants from various countries around the world.
+                    </p>
+
+                    <div class="image-box">
+                        <img
+                            src="https://cdn.scalev.com/uploads/1785135348/_NIdSg27us8jOkCPUDn-Ww/1785135348122-international-participants.webp"
+                            alt="International EV training participants"
+                        >
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <h3>Industry-Based Curriculum</h3>
+
+                    <p>
+                        Learn about High-Voltage Batteries, Battery Management Systems (BMS),
+                        Drive Motors, Charging Systems, and EV Diagnostics.
+                    </p>
+
+                    <div class="image-box">
+                        <img
+                            src="https://cdn.scalev.com/uploads/1785135341/a3NR0dkuEoInzSq38hTPrQ/1785135341132-industry-based-curriculum.webp"
+                            alt="Industry-based EV curriculum"
+                        >
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <h3>Learn Anytime, Anywhere</h3>
+
+                    <p>
+                        Access 58 video lessons that you can watch as many times as you need,
+                        so you'll never worry about missing important material.
+                    </p>
+
+                    <div class="image-box">
+                        <img
+                            src="https://cdn.scalev.com/uploads/1785135333/lh5G1-OEu6m-X7_3b-NrVg/1785135333843-online-learning.webp"
+                            alt="Online EV learning"
+                        >
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <h3>You're Never Learning Alone</h3>
+
+                    <p>
+                        Receive 2 live consultation sessions with an experienced mentor.
+                    </p>
+
+                    <div class="image-box">
+                        <img
+                            src="https://cdn.scalev.com/uploads/1785135319/52mOm2g3-4RZwYCaBiR0jA/1785135319094-never-learning-alone.webp"
+                            alt="Live EV training consultation"
+                        >
+                    </div>
+                </div>
+
+                <div class="proof-card">
+                    <h3>Designed for Workshop Professionals</h3>
+
+                    <p>
+                        The course is structured to be practical and easy to understand
+                        for both technicians and workshop owners.
+                    </p>
+
+                    <div class="image-box">
+                        <img
+                            src="https://cdn.scalev.com/uploads/1785135326/tClnEPgkD7deqAXturrAMg/1785135326278-workshop-professional.webp"
+                            alt="EV workshop professionals"
+                        >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DREAM OUTCOME -->
+    <section>
+        <div class="container">
+
+            <div class="section-title">
+                <h2>What Will You Get?</h2>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Your Goal</th>
+                            <th>What You'll Receive</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Confidently accept EV repair jobs</td>
+                            <td>58 EV Video Lessons</td>
+                        </tr>
+
+                        <tr>
+                            <td>Understand High-Voltage Batteries</td>
+                            <td>High-Voltage Battery Module</td>
+                        </tr>
+
+                        <tr>
+                            <td>Learn EV High-Voltage Distribution</td>
+                            <td>High-Voltage Distribution System Module</td>
+                        </tr>
+
+                        <tr>
+                            <td>Understand Battery Management Systems</td>
+                            <td>Battery Management System (BMS) Module</td>
+                        </tr>
+
+                        <tr>
+                            <td>Learn EV Drive Motor Technology</td>
+                            <td>Drive Motor System Module</td>
+                        </tr>
+
+                        <tr>
+                            <td>Understand EV Charging Systems</td>
+                            <td>Charging System Module</td>
+                        </tr>
+
+                        <tr>
+                            <td>Learn High-Voltage Air Conditioning Systems</td>
+                            <td>High Voltage Air Conditioning System</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ask questions directly to an expert</td>
+                            <td>2 Live Consultation Sessions</td>
+                        </tr>
+
+                        <tr>
+                            <td>Learn without leaving your workshop</td>
+                            <td>Online Access</td>
+                        </tr>
+
+                        <tr>
+                            <td>Review the lessons anytime</td>
+                            <td>2 Years Access</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RISK REVERSAL -->
+    <section>
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Still Not Sure?</h2>
+            </div>
+
+            <div class="objection">
+                <h3>
+                    “I've never worked on an electric vehicle before.
+                    I'm afraid the course will be too difficult.”
+                </h3>
+            </div>
+
+            <div class="risk-box">
+
+                <ul>
+                    <li>
+                        The course starts from the fundamentals, making it ideal
+                        for workshops that are new to EV technology.
+                    </li>
+
+                    <li>
+                        Replay every lesson whenever you need to review the material.
+                    </li>
+
+                    <li>
+                        Get 2 live consultation sessions to ask questions directly
+                        to your mentor.
+                    </li>
+
+                    <li>
+                        No need to close your workshop or travel abroad.
+                        Learn at your own pace with no fixed daily class schedule.
+                    </li>
+
+                    <li>
+                        Learn at your own pace with no fixed daily class schedule.
+                    </li>
+                </ul>
+
+                <div class="price">
+                    <h3>Prepare Your Workshop for the Electric Vehicle Era</h3>
+
+                    <p>
+                        Start learning electric vehicle technology today with
+                        58 in-depth video lessons and 2 live consultation sessions.
+                    </p>
+
+                    <h2>USD 360</h2>
+                </div>
+
+                <div class="footer-cta">
+                    <a
+                        href="#"
+                        class="btn"
+                        onclick="
+                            fbq('track', 'Lead');
+                            setTimeout(function () {
+                                window.location.href = 'https://wa.me/message/LLEIHRR54SLJA1';
+                            }, 300);
+                            return false;
+                        "
+                    >
+                        Enroll Now
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
