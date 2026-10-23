@@ -132,7 +132,25 @@
             } 
         .brand-training {
         text-align: center;
+        } 
+
+        /* BENEFITS SECTION */
+        section#benefits {
+            background: #f5f7fa;
+            padding: 60px 0;
         }
+        
+        #benefits .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 30px;
+        }
+
+@media (max-width: 768px) {
+    #benefits .proof-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
         .hero-grid {
             display: grid;
@@ -466,12 +484,13 @@
             >
         </div>
 
-    </div>
-    </section>
+  </div>
+</section>
 
-
-    </section>
-            <div class="proof-grid">
+<!-- BENEFITS SECTION -->
+<section id="benefits">
+    <div class="container">
+        <div class="proof-grid">
 
                 <div class="proof-card">
                     <h3>International Participants</h3>
