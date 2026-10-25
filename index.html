@@ -197,23 +197,61 @@
             font-size: 40px;
         } 
         
-        /* PROGRAM & INVESTMENT SECTION */
-        section#program {
-            background: linear-gradient(135deg, #081220, #0b2239);
-            color: #ffffff;
-        }
-        
-        #program .section-title p {
-            color: #d7d7d7;
-        }
-        
-        #program .section-title h2 {
-            color: #ffffff;
-        }
-        
-        #program .footer-cta p {
-            color: #d7d7d7;
-        }
+       
+            /* PROGRAM & INVESTMENT SECTION */
+            section#program {
+                background: linear-gradient(135deg, #081220, #0b2239);
+                color: #ffffff;
+            }
+            
+            #program .section-title h2 {
+                color: #ffffff;
+            }
+            
+            #program .section-title p,
+            #program .footer-cta p {
+                color: #d7d7d7;
+            }
+            
+            /* Table header */
+            #program table thead th {
+                background: #0077ff;
+                color: #ffffff;
+                text-align: left;
+            }
+            
+            /* Table body text */
+            #program table tbody td {
+                color: #222222;
+                background: #ffffff;
+            }
+            
+            /* Alternating row colors */
+            #program table tbody tr:nth-child(even) td {
+                background: #f1f5f9;
+                color: #222222;
+            }
+            
+            /* Center the right column header */
+            #program table thead th:nth-child(2) {
+                text-align: center;
+            }
+            
+            /* Keep right column content left-aligned */
+            #program table tbody td:nth-child(2) {
+                text-align: left;
+            }
+            
+            /* CTA button */
+            #program .footer-cta .btn {
+                background: #0077ff;
+                color: #ffffff;
+            }
+            
+            #program .footer-cta .btn:hover {
+                background: #005fcc;
+            }
+
 
 
         /* PROOF */
